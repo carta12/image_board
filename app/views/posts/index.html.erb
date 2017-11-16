@@ -1,0 +1,7 @@
+<h1>레알 인스타입니다. 까꿍~</h1>
+<%= link_to("[포스트 작성]", new_post_path) %>
+
+
+<% @posts.each do |post| %>
+    <p><%=link_to "#{post.id} 번째 글 ", post_path(post)%> <%= link_to image_tag("#{post.image_url}", height: '100', width: '200'), post_path(post) %></p>
+<% end %>

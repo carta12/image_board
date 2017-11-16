@@ -1,0 +1,7 @@
+<h1>포스트 수정하기</h1>
+
+<%= form_tag(post_path(@post.id), method:"put") do %>
+    <%= text_field_tag(:image_url, @post.image_url) %><br/><br/>
+    <%= text_area_tag(:story, @post.story, size: "21x6") %><br/>
+    <%= submit_tag("수정") %>
+<% end %>

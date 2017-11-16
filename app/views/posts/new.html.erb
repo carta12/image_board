@@ -1,0 +1,7 @@
+<h1>포스트 작성</h1>
+
+<%= form_tag(posts_path, method:"post") do %>
+    <%= text_field_tag(:image_url, nil, placeholder: "이미지 주소를 입력하세요") %><br/><br/>
+    <%= text_area_tag(:story, nil, placeholder: "내용을 입력하세요", size: "21x6") %><br/>
+    <%= submit_tag("작성") %>
+<% end %>
